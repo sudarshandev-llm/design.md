@@ -60,7 +60,7 @@ export class ModelHandler implements ModelSpec {
             findings.push({
               severity: 'error',
               path: `colors.${name}`,
-              message: `'${raw}' is not a valid color. Expected a hex color code (e.g., #ffffff).`,
+              message: `'${raw}' is not a valid color. Expected a CSS color value (e.g., #ffffff, rgb(0 0 0), oklch(0.5 0.2 240)).`,
             });
             // Store as-is for fallback
             symbolTable.set(`colors.${name}`, raw);
